@@ -4,7 +4,7 @@ import './App.css';
 const HelloWorld = () => {
 
   return (
-    <div>Hello World! Notlify test in {window?.location?.href ?? ''}</div>
+    <div>Hello World! Netlify test in {window?.location?.href ?? ''}</div>
   );
 }
 
