@@ -1,10 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Counter from '../src/components/Counter';
+import { Counter } from '../src/components/Counter';
 
 const HelloWorld = () => {
-
   return (
     <div>Hello World! Netlify test in {window?.location?.href ?? ''}</div>
   );

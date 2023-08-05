@@ -1,25 +1,26 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import { increment, decrement } from './action-creator';
+import { increment, decrement, selectCount } from './counterSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
-const Counter = ({ count, onIncrement, onDecrement }) => {
-    return (
-        <div>
-            <p>Counter is {count}</p>
-            <button onClick={onIncrement}>Add</button>
-            <button onClick={() => onDecrement()}>Rem</button>
-        </div>
-    );
-}
+const CounterPresentation = ({ count, onIncrement, onDecrement }) => (
+    <>
+        <p>Counter is {count}</p>
+        <button onClick={onIncrement}>Increment</button>
+        <button onClick={onDecrement}>Decrement</button>
+    </>
+);
 
-const mapStateToProps = (state) => ({
-    count: state?.counter?.count
-});
+const CounterContainer = () => {
+    const dispatch = useDispatch();
 
-const mapDispatchToProps = (dispatch) => ({
-    onIncrement: () => dispatch(increment()),
-    onDecrement: () => dispatch(decrement()),
-});
+    const props = {
+        count: useSelector(selectCount),
+        onIncrement: () => dispatch(increment()),
+        onDecrement: () => dispatch(decrement())
+    };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+    return <CounterPresentation {...props} /> ;
+};
+
+export { CounterContainer as Counter };
