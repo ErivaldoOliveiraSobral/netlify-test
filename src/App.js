@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Counter from '../src/components/Counter';
+
 const HelloWorld = () => {
 
   return (
@@ -14,6 +16,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <HelloWorld />
+        <Counter />
       </header>
     </div>
   );
