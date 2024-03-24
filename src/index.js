@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App/App';
-import { Counter } from './components/Counter';
 import reportWebVitals from './app/reportWebVitals';
 
 import { Provider } from 'react-redux';
@@ -13,10 +12,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/counter",
-    element: <Counter />
   }
 ]);
 
