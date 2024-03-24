@@ -3,7 +3,10 @@ import './App.css';
 
 const HelloWorld = () => {
   return (
-    <div>Netlify test in {window?.location?.href ?? ''}</div>
+    <div>
+      <div>Em desenvolvimento!</div>
+      <pre>Hostname: {window?.location?.hostname ?? ''}</pre>
+    </div>
   );
 }
 
