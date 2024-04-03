@@ -1,7 +1,7 @@
 import logo from '../../app/assets/logo.svg';
-import './App.css';
+import './styles.css';
 
-const HelloWorld = () => {
+const WIPMessage = () => {
   return (
     <div>
       <div>Em desenvolvimento!</div>
@@ -10,15 +10,15 @@ const HelloWorld = () => {
   );
 }
 
-function App() {
+function Placeholder() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <HelloWorld />
+        <WIPMessage />
       </header>
     </div>
   );
 }
 
-export default App;
+export default Placeholder;

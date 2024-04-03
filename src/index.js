@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './components/App/App';
+import { Provider } from 'react-redux';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import { store } from '../src/app/store';
 import reportWebVitals from './app/reportWebVitals';
 
-import { Provider } from 'react-redux';
-import { store } from '../src/app/store';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import App from './pages';
+// import Counter from './pages/Counter'
+import Links from './pages/Links';
+
+import './index.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  // {
+  //   path: "/counter",
+  //   element: <Counter />
+  // },
+  {
+    path: "/4dev",
+    element: <Links />,
   }
 ]);
 
