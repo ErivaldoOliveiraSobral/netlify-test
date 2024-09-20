@@ -9,6 +9,7 @@ import reportWebVitals from './app/reportWebVitals';
 import App from './pages';
 // import Counter from './pages/Counter'
 import Links from './pages/Links';
+import Video from './pages/Video';
 
 import './index.css';
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/4dev",
     element: <Links />,
+  },
+  {
+    path: "/a7x",
+    element: <Video />,
   }
 ]);
 
