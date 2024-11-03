@@ -25,7 +25,7 @@ const Image = ({ src, onClick, className }) => (
 )
 
 const ImageSection = ({ onClick }) => {
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState(0)
 
   const handleClick = (value, index) => {
     setSelected(index);
