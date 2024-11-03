@@ -19,7 +19,7 @@ const images = [
 ]
 
 const Image = ({ src, onClick }) => (
-  <div class="item">
+  <div class="blackops_terminus_item">
     <img alt="" src={src} onClick={onClick} />
   </div>
 )
@@ -36,26 +36,26 @@ function Terminus() {
   }, [x, y, z])
 
   return (
-    <div className="container">
+    <div className="blackops_terminus_container">
       <pre>{JSON.stringify(result)}</pre>
 
-      <section>
+      <section className='blackops_terminus_section'>
         <span>Selecione o valor de X:</span>
-        <div class="grid grid-template-columns-1">
+        <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
           {images.map(({ src, value }) => <Image src={src} onClick={() => setX(value)} />)}
         </div>
       </section>
 
-      <section>
+      <section className='blackops_terminus_section'>
         <span>Selecione o valor de Y:</span>
-        <div class="grid grid-template-columns-1">
+        <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
           {images.map(({ src, value }) => <Image src={src} onClick={() => setY(value)} />)}
         </div>
       </section>
 
-      <section>
+      <section className='blackops_terminus_section'>
         <span>Selecione o valor de Z:</span>
-        <div class="grid grid-template-columns-1">
+        <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
           {images.map(({ src, value }) => <Image src={src} onClick={() => setZ(value)} />)}
         </div>
       </section>

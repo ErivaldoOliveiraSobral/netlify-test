@@ -1,30 +1,40 @@
-.container {
+.blackops_terminus_container {
   /* background-color: red; */
-  margin: 3rem 2rem;
+  padding: 3rem 2rem;
+  background-image: url('./img/background.png');
 }
 
-section {
-  background-color: yellow;
+.blackops_terminus_section {
   text-align: center;
   margin: 10px 0;
 }
 
-.grid {
+.blackops_terminus_grid {
 	display: grid;
 }
 
-/* 100px é o valor total, ignora conteúdo, margem e etc. Respeita apenas o min-width do item.*/
-.grid-template-columns-1 {
+.blackops_terminus_grid-template-columns {
 	grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
-.item {
+.blackops_terminus_item {
 	margin: 1px;
   padding: 1px;
-	background: tomato;
+	/* background: rgb(101, 99, 99); */
 }
 
-.item img {
+.blackops_terminus_item img {
   max-width: 50%;
   cursor: pointer;
+}
+
+.blackops_terminus_container pre {
+  background-color: rgb(101, 99, 99);
+  text-align: center;
+  font-size: 30px;
+}
+
+.blackops_terminus_section span {
+  display: block;
+  background-color: rgb(101, 99, 99);
 }
