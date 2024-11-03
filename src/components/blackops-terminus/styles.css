@@ -1,8 +1,6 @@
 .blackops_terminus_container {
   background-image: url('./img/background2.png');
-  /* background-position: center center; */
   background-size: 100% 100%;
-  background-clip: padding-box;
   min-height: 100vh;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -18,7 +16,13 @@
 }
 
 .blackops_terminus_grid-template-columns {
-	grid-template-columns: 33.3% 33.3% 33.3%;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (min-width: 800px) {
+  .blackops_terminus_grid-template-columns {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .blackops_terminus_item {

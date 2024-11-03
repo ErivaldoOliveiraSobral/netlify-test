@@ -60,7 +60,7 @@ function Terminus() {
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de X:</span>
-        <div className="blackops_terminus_grid blackops_terminus_grid-template-columns">
+        <div className="blackops_terminus_grid blackops_terminus_grid-template-columns one-sixth">
           <ImageSection onClick={setX}/>
         </div>
       </section>
