@@ -1,6 +1,8 @@
 .blackops_terminus_container {
-  background-image: url('./img/background.png');
-  background-position: center center;
+  background-image: url('./img/background2.png');
+  /* background-position: center center; */
+  background-size: 100%;
+  background-clip: padding-box;
   min-height: 100vh;
   padding-top: 1rem;
 }
