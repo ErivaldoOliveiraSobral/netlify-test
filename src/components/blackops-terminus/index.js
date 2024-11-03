@@ -56,7 +56,7 @@ function Terminus() {
 
   return (
     <div className="blackops_terminus_container">
-      <pre>{JSON.stringify(result)}</pre>
+      <pre>{String(result).replaceAll('-', '')}</pre>
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de X:</span>
