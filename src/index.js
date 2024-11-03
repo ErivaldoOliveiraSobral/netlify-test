@@ -9,6 +9,7 @@ import reportWebVitals from './app/reportWebVitals';
 import App from './pages';
 // import Counter from './pages/Counter'
 import Links from './pages/Links';
+import BlackOpsTerminus from './pages/BlackOpsTerminus';
 
 import './index.css';
 
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/4dev",
     element: <Links />,
-  }
+  },
+  {
+    path: "/blackops-terminus",
+    element: <BlackOpsTerminus />
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
