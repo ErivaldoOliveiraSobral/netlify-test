@@ -18,11 +18,30 @@ const images = [
   { src: twentyTwo, value: 22 },
 ]
 
-const Image = ({ src, onClick }) => (
-  <div class="blackops_terminus_item">
-    <img alt="" src={src} onClick={onClick} />
+const Image = ({ src, onClick, className }) => (
+  <div className="blackops_terminus_item">
+    <img className={className} alt="" src={src} onClick={onClick} />
   </div>
 )
+
+const ImageSection = ({ onClick }) => {
+  const [selected, setSelected] = useState("")
+
+  const handleClick = (value, index) => {
+    setSelected(index);
+    
+    onClick(value)
+  }
+
+  return images.map((args, index) => (
+    <Image key={index} 
+      { ...args }
+      onClick={() => handleClick(args.value, index)}
+      className={
+        selected === index && 'blackops_terminus_item_selected'}
+      />
+  ))
+}
 
 function Terminus() {
   const [x, setX] = useState(0);
@@ -41,22 +60,22 @@ function Terminus() {
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de X:</span>
-        <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
-          {images.map(({ src, value }, index) => <Image key={index} src={src} onClick={() => setX(value)} />)}
+        <div className="blackops_terminus_grid blackops_terminus_grid-template-columns">
+          <ImageSection onClick={setX}/>
         </div>
       </section>
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de Y:</span>
-        <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
-          {images.map(({ src, value }, index) => <Image key={index} src={src} onClick={() => setY(value)} />)}
+        <div className="blackops_terminus_grid blackops_terminus_grid-template-columns">
+          <ImageSection onClick={setY}/>
         </div>
       </section>
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de Z:</span>
-        <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
-          {images.map(({ src, value }, index) => <Image key={index} src={src} onClick={() => setZ(value)} />)}
+        <div className="blackops_terminus_grid blackops_terminus_grid-template-columns">
+          <ImageSection onClick={setZ}/>
         </div>
       </section>
     </div>

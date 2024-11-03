@@ -19,12 +19,17 @@
 }
 
 .blackops_terminus_item {
-	margin: 1px;
-  padding: 1px;
-	/* background: rgb(101, 99, 99); */
+  padding: 2px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.blackops_terminus_item img {
+.blackops_terminus_item_selected {
+  border: red 2px solid;
+}
+
+.blackops_terminus_grid img {
   max-width: 50%;
   cursor: pointer;
 }
