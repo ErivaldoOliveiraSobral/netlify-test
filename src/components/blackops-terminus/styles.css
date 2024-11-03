@@ -1,7 +1,8 @@
 .blackops_terminus_container {
-  /* background-color: red; */
-  padding: 3rem 2rem;
   background-image: url('./img/background.png');
+  background-position: center center;
+  min-height: 100vh;
+  padding-top: 1rem;
 }
 
 .blackops_terminus_section {
@@ -29,12 +30,14 @@
 }
 
 .blackops_terminus_container pre {
-  background-color: rgb(101, 99, 99);
+  background: rgb(101, 99, 99);
+  opacity: 0.7;
   text-align: center;
   font-size: 30px;
 }
 
 .blackops_terminus_section span {
   display: block;
-  background-color: rgb(101, 99, 99);
+  background: rgb(101, 99, 99);
+  opacity: 0.7;
 }

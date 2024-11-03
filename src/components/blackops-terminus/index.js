@@ -42,21 +42,21 @@ function Terminus() {
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de X:</span>
         <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
-          {images.map(({ src, value }) => <Image src={src} onClick={() => setX(value)} />)}
+          {images.map(({ src, value }, index) => <Image key={index} src={src} onClick={() => setX(value)} />)}
         </div>
       </section>
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de Y:</span>
         <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
-          {images.map(({ src, value }) => <Image src={src} onClick={() => setY(value)} />)}
+          {images.map(({ src, value }, index) => <Image key={index} src={src} onClick={() => setY(value)} />)}
         </div>
       </section>
 
       <section className='blackops_terminus_section'>
         <span>Selecione o valor de Z:</span>
         <div class="blackops_terminus_grid blackops_terminus_grid-template-columns">
-          {images.map(({ src, value }) => <Image src={src} onClick={() => setZ(value)} />)}
+          {images.map(({ src, value }, index) => <Image key={index} src={src} onClick={() => setZ(value)} />)}
         </div>
       </section>
     </div>
